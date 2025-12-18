@@ -1,36 +1,47 @@
 import Layout from "@/components/Layout";
 import { Link } from "react-router-dom";
-import { ArrowRight, CheckCircle2, Building2, Users, Zap, Globe } from "lucide-react";
+import {
+  ArrowRight,
+  CheckCircle2,
+  Building2,
+  Users,
+  Zap,
+  Globe,
+} from "lucide-react";
 
 export default function Index() {
   const services = [
     {
       icon: Building2,
       title: "Infrastructure Projects",
-      description: "Large-scale infrastructure development including roads, bridges, and utilities"
+      description:
+        "Large-scale infrastructure development including roads, bridges, and utilities",
     },
     {
       icon: Zap,
       title: "Engineering Solutions",
-      description: "Advanced engineering consulting and technical expertise for complex projects"
+      description:
+        "Advanced engineering consulting and technical expertise for complex projects",
     },
     {
       icon: Users,
       title: "Project Management",
-      description: "End-to-end project management with proven delivery excellence"
+      description:
+        "End-to-end project management with proven delivery excellence",
     },
     {
       icon: Globe,
       title: "Construction Services",
-      description: "Complete construction execution with quality assurance and safety standards"
-    }
+      description:
+        "Complete construction execution with quality assurance and safety standards",
+    },
   ];
 
   const highlights = [
     "Ready for Projects",
     "Expert Team",
     "Modern Technology",
-    "Quality Assured"
+    "Quality Assured",
   ];
 
   return (
@@ -50,13 +61,16 @@ export default function Index() {
               <div className="space-y-4">
                 <div className="inline-flex items-center gap-3 px-4 py-2 bg-blue-50 rounded-full border border-blue-200">
                   <span className="w-2 h-2 bg-blue-600 rounded-full"></span>
-                  <span className="text-sm font-medium text-blue-700">Building the Future</span>
+                  <span className="text-sm font-medium text-blue-700">
+                    Building the Future
+                  </span>
                 </div>
                 <h1 className="text-5xl md:text-6xl font-bold text-slate-900 leading-tight">
                   Agroha Infrastructure
                 </h1>
                 <p className="text-xl text-slate-600">
-                  Ready to take on all infrastructure projects with expertise, innovation, and commitment to excellence
+                  Ready to take on all infrastructure projects with expertise,
+                  innovation, and commitment to excellence
                 </p>
               </div>
 
@@ -95,7 +109,9 @@ export default function Index() {
               <div className="absolute inset-0 bg-gradient-to-br from-blue-400/20 to-transparent rounded-2xl p-8 flex items-center justify-center">
                 <div className="text-center text-white">
                   <Building2 className="h-24 w-24 mx-auto mb-6 opacity-80" />
-                  <p className="text-lg font-semibold">Infrastructure Excellence</p>
+                  <p className="text-lg font-semibold">
+                    Infrastructure Excellence
+                  </p>
                 </div>
               </div>
             </div>
@@ -107,51 +123,77 @@ export default function Index() {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-slate-900 mb-4">About Agroha Infrastructure</h2>
+            <h2 className="text-4xl font-bold text-slate-900 mb-4">
+              About Agroha Infrastructure
+            </h2>
             <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-              Led by Mukesh Gupta, we bring vision and expertise to every infrastructure project. Though new, we're equipped with the latest technology and experienced team to handle complex infrastructure challenges.
+              Led by Mukesh Gupta, we bring vision and expertise to every
+              infrastructure project. Though new, we're equipped with the latest
+              technology and experienced team to handle complex infrastructure
+              challenges.
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
               <div className="space-y-4">
-                <h3 className="text-2xl font-bold text-slate-900">Our Vision</h3>
+                <h3 className="text-2xl font-bold text-slate-900">
+                  Our Vision
+                </h3>
                 <p className="text-slate-600">
-                  To be a leading infrastructure developer delivering world-class projects that transform communities and drive economic growth.
+                  To be a leading infrastructure developer delivering
+                  world-class projects that transform communities and drive
+                  economic growth.
                 </p>
               </div>
 
               <div className="space-y-4">
-                <h3 className="text-2xl font-bold text-slate-900">Our Mission</h3>
+                <h3 className="text-2xl font-bold text-slate-900">
+                  Our Mission
+                </h3>
                 <p className="text-slate-600">
-                  To execute infrastructure projects with uncompromising quality, innovation, and commitment to sustainable development.
+                  To execute infrastructure projects with uncompromising
+                  quality, innovation, and commitment to sustainable
+                  development.
                 </p>
               </div>
 
               {/* Leadership */}
               <div className="bg-blue-50 rounded-xl p-6 border border-blue-200">
-                <h4 className="font-semibold text-slate-900 mb-2">Leadership</h4>
+                <h4 className="font-semibold text-slate-900 mb-2">
+                  Leadership
+                </h4>
                 <p className="text-slate-700">
-                  <span className="font-semibold">Mukesh Gupta</span> - Founder & Chief
+                  <span className="font-semibold">Mukesh Gupta</span> - Founder
+                  & Chief
                 </p>
                 <p className="text-sm text-slate-600 mt-2">
-                  Driving Agroha Infrastructure with passion for excellence and innovation in infrastructure development.
+                  Driving Agroha Infrastructure with passion for excellence and
+                  innovation in infrastructure development.
                 </p>
               </div>
             </div>
 
             <div className="space-y-6">
               {highlights.map((highlight, index) => (
-                <div key={index} className="flex items-start gap-4 p-4 rounded-lg hover:bg-slate-50 transition-colors">
+                <div
+                  key={index}
+                  className="flex items-start gap-4 p-4 rounded-lg hover:bg-slate-50 transition-colors"
+                >
                   <CheckCircle2 className="h-6 w-6 text-blue-600 flex-shrink-0 mt-1" />
                   <div>
-                    <h4 className="font-semibold text-slate-900">{highlight}</h4>
+                    <h4 className="font-semibold text-slate-900">
+                      {highlight}
+                    </h4>
                     <p className="text-sm text-slate-600 mt-1">
-                      {highlight === "Ready for Projects" && "Fully equipped to undertake any infrastructure project"}
-                      {highlight === "Expert Team" && "Experienced professionals in all disciplines"}
-                      {highlight === "Modern Technology" && "Latest tools and methodologies"}
-                      {highlight === "Quality Assured" && "Commitment to excellence at every stage"}
+                      {highlight === "Ready for Projects" &&
+                        "Fully equipped to undertake any infrastructure project"}
+                      {highlight === "Expert Team" &&
+                        "Experienced professionals in all disciplines"}
+                      {highlight === "Modern Technology" &&
+                        "Latest tools and methodologies"}
+                      {highlight === "Quality Assured" &&
+                        "Commitment to excellence at every stage"}
                     </p>
                   </div>
                 </div>
@@ -165,7 +207,9 @@ export default function Index() {
       <section className="py-20 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-slate-900 mb-4">Our Services</h2>
+            <h2 className="text-4xl font-bold text-slate-900 mb-4">
+              Our Services
+            </h2>
             <p className="text-lg text-slate-600 max-w-2xl mx-auto">
               Comprehensive infrastructure solutions from concept to completion
             </p>
@@ -182,8 +226,12 @@ export default function Index() {
                   <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4 group-hover:bg-blue-600 transition-colors">
                     <Icon className="h-6 w-6 text-blue-600 group-hover:text-white transition-colors" />
                   </div>
-                  <h3 className="text-lg font-semibold text-slate-900 mb-3">{service.title}</h3>
-                  <p className="text-slate-600 text-sm">{service.description}</p>
+                  <h3 className="text-lg font-semibold text-slate-900 mb-3">
+                    {service.title}
+                  </h3>
+                  <p className="text-slate-600 text-sm">
+                    {service.description}
+                  </p>
                 </div>
               );
             })}
@@ -194,9 +242,12 @@ export default function Index() {
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-blue-600 to-blue-800">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl font-bold text-white mb-6">Ready for Your Next Project?</h2>
+          <h2 className="text-4xl font-bold text-white mb-6">
+            Ready for Your Next Project?
+          </h2>
           <p className="text-lg text-blue-100 mb-8 max-w-2xl mx-auto">
-            We're equipped with expertise, technology, and passion to execute your infrastructure projects successfully.
+            We're equipped with expertise, technology, and passion to execute
+            your infrastructure projects successfully.
           </p>
           <Link
             to="/contact"

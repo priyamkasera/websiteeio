@@ -27,7 +27,9 @@ export default function Header() {
             </div>
             <div className="hidden sm:flex flex-col">
               <span className="font-bold text-lg text-slate-900">Agroha</span>
-              <span className="text-xs text-slate-600 leading-none">Infrastructure</span>
+              <span className="text-xs text-slate-600 leading-none">
+                Infrastructure
+              </span>
             </div>
           </Link>
 
@@ -41,7 +43,7 @@ export default function Header() {
                   "text-sm font-medium transition-colors",
                   isActive(item.href)
                     ? "text-blue-600 border-b-2 border-blue-600"
-                    : "text-slate-700 hover:text-blue-600"
+                    : "text-slate-700 hover:text-blue-600",
                 )}
               >
                 {item.label}
@@ -85,7 +87,7 @@ export default function Header() {
                     "px-4 py-2 rounded-lg text-sm font-medium transition-colors",
                     isActive(item.href)
                       ? "bg-blue-50 text-blue-600"
-                      : "text-slate-700 hover:bg-slate-100"
+                      : "text-slate-700 hover:bg-slate-100",
                   )}
                 >
                   {item.label}

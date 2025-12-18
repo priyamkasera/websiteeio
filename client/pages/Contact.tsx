@@ -8,16 +8,18 @@ export default function Contact() {
     email: "",
     phone: "",
     subject: "",
-    message: ""
+    message: "",
   });
 
   const [submitted, setSubmitted] = useState(false);
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+  ) => {
     const { name, value } = e.target;
-    setFormData(prev => ({
+    setFormData((prev) => ({
       ...prev,
-      [name]: value
+      [name]: value,
     }));
   };
 
@@ -38,9 +40,12 @@ export default function Contact() {
       <section className="py-20 bg-gradient-to-br from-slate-50 to-blue-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h1 className="text-5xl font-bold text-slate-900 mb-6">Get in Touch</h1>
+            <h1 className="text-5xl font-bold text-slate-900 mb-6">
+              Get in Touch
+            </h1>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-              Have a project in mind? We'd love to hear from you. Let's discuss how we can help bring your vision to life.
+              Have a project in mind? We'd love to hear from you. Let's discuss
+              how we can help bring your vision to life.
             </p>
           </div>
         </div>
@@ -55,11 +60,16 @@ export default function Contact() {
               <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mb-6">
                 <Phone className="h-6 w-6 text-white" />
               </div>
-              <h3 className="text-lg font-semibold text-slate-900 mb-2">Phone</h3>
+              <h3 className="text-lg font-semibold text-slate-900 mb-2">
+                Phone
+              </h3>
               <p className="text-slate-600 mb-4">
                 Call us for immediate assistance
               </p>
-              <a href="tel:+919876543210" className="text-blue-600 font-semibold hover:text-blue-700">
+              <a
+                href="tel:+919876543210"
+                className="text-blue-600 font-semibold hover:text-blue-700"
+              >
                 +91 98765 43210
               </a>
             </div>
@@ -68,11 +78,14 @@ export default function Contact() {
               <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mb-6">
                 <Mail className="h-6 w-6 text-white" />
               </div>
-              <h3 className="text-lg font-semibold text-slate-900 mb-2">Email</h3>
-              <p className="text-slate-600 mb-4">
-                Send us an email anytime
-              </p>
-              <a href="mailto:info@agro-ha.com" className="text-blue-600 font-semibold hover:text-blue-700">
+              <h3 className="text-lg font-semibold text-slate-900 mb-2">
+                Email
+              </h3>
+              <p className="text-slate-600 mb-4">Send us an email anytime</p>
+              <a
+                href="mailto:info@agro-ha.com"
+                className="text-blue-600 font-semibold hover:text-blue-700"
+              >
                 info@agro-ha.com
               </a>
             </div>
@@ -81,32 +94,51 @@ export default function Contact() {
               <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mb-6">
                 <MapPin className="h-6 w-6 text-white" />
               </div>
-              <h3 className="text-lg font-semibold text-slate-900 mb-2">Location</h3>
-              <p className="text-slate-600">
-                New Delhi, India
-              </p>
+              <h3 className="text-lg font-semibold text-slate-900 mb-2">
+                Location
+              </h3>
+              <p className="text-slate-600">New Delhi, India</p>
             </div>
           </div>
 
           {/* Contact Form */}
           <div className="max-w-2xl mx-auto bg-slate-50 p-10 rounded-2xl border border-slate-200">
-            <h2 className="text-3xl font-bold text-slate-900 mb-8">Send us a Message</h2>
-            
+            <h2 className="text-3xl font-bold text-slate-900 mb-8">
+              Send us a Message
+            </h2>
+
             {submitted ? (
               <div className="bg-green-50 border border-green-200 rounded-lg p-6 text-center">
                 <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <svg className="h-6 w-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  <svg
+                    className="h-6 w-6 text-green-600"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M5 13l4 4L19 7"
+                    />
                   </svg>
                 </div>
-                <h3 className="text-lg font-semibold text-slate-900 mb-2">Thank you!</h3>
-                <p className="text-slate-600">We've received your message and will get back to you soon.</p>
+                <h3 className="text-lg font-semibold text-slate-900 mb-2">
+                  Thank you!
+                </h3>
+                <p className="text-slate-600">
+                  We've received your message and will get back to you soon.
+                </p>
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
-                    <label htmlFor="name" className="block text-sm font-medium text-slate-900 mb-2">
+                    <label
+                      htmlFor="name"
+                      className="block text-sm font-medium text-slate-900 mb-2"
+                    >
                       Your Name
                     </label>
                     <input
@@ -121,7 +153,10 @@ export default function Contact() {
                     />
                   </div>
                   <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-slate-900 mb-2">
+                    <label
+                      htmlFor="email"
+                      className="block text-sm font-medium text-slate-900 mb-2"
+                    >
                       Email Address
                     </label>
                     <input
@@ -138,7 +173,10 @@ export default function Contact() {
                 </div>
 
                 <div>
-                  <label htmlFor="phone" className="block text-sm font-medium text-slate-900 mb-2">
+                  <label
+                    htmlFor="phone"
+                    className="block text-sm font-medium text-slate-900 mb-2"
+                  >
                     Phone Number
                   </label>
                   <input
@@ -153,7 +191,10 @@ export default function Contact() {
                 </div>
 
                 <div>
-                  <label htmlFor="subject" className="block text-sm font-medium text-slate-900 mb-2">
+                  <label
+                    htmlFor="subject"
+                    className="block text-sm font-medium text-slate-900 mb-2"
+                  >
                     Subject
                   </label>
                   <input
@@ -169,7 +210,10 @@ export default function Contact() {
                 </div>
 
                 <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-slate-900 mb-2">
+                  <label
+                    htmlFor="message"
+                    className="block text-sm font-medium text-slate-900 mb-2"
+                  >
                     Message
                   </label>
                   <textarea
